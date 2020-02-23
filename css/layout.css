@@ -186,6 +186,10 @@ a:hover {
     margin-bottom: 10px;
 }
 
+.line-item {
+    margin-right: 8px;
+}
+
 .remainHp {
     position: relative;
     z-index: 1;
