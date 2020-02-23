@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+<link rel="icon" type="image/png" href="img/favicon/favicon512.png" />
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=700" />
+    <title>Type Balance Checker</title>
+    <link type="text/css" rel="stylesheet" href="css/select2/select2.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="css/textbox.css" />
+    <link type="text/css" rel="stylesheet" href="css/button.css" />
+    <link type="text/css" rel="stylesheet" href="css/table.css" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="header-icon"><img src="img/favicon/favicon512.png" style="height: 24px" /></div>
+            <div class="header-title">Type Balance Checker</div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="container">
+
+            <div class="panel">
+                <div class="side">
+                    <div id="p1Exclude" class="panel-icon"><span id="p1Icon"><img src="img/pokemon/フシギダネ.png" /></span></div>
+                    <div id="p1Type1" class="line"><img src="img/type/tag_grass.jpeg" style="width: 72px" /></div>
+                    <div id="p1Type2" class="line"><img src="img/type/tag_poison.jpeg" style="width: 72px" /></div>
+                </div>
+                <div class="panel-title">ポケモン1</div>
+                <div class="line"><select name="p1Name" id="p1Name" class="select-pokemon suggest pokemon-name" style="min-width: 280px"></select></div>
+                <div class="line"><select name="p1m1Name" id="p1m1Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p1m1Type"></span><span id="p1m1Category"></span></div>
+                <div class="line"><select name="p1m2Name" id="p1m2Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p1m2Type"></span><span id="p1m2Category"></span></div>
+                <div class="line"><select name="p1m3Name" id="p1m3Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p1m3Type"></span><span id="p1m3Category"></span></div>
+                <div class="line"><select name="p1m4Name" id="p1m4Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p1m4Type"></span><span id="p1m4Category"></span></div>
+                <input type="hidden" id="p1Name-on" value="0" />
+            </div>
+
+            <div class="panel">
+                <div class="side">
+                    <div id="p2Exclude" class="panel-icon"><span id="p2Icon"><img src="img/pokemon/フシギダネ.png" /></span></div>
+                    <div id="p2Type1" class="line"><img src="img/type/tag_grass.jpeg" style="width: 72px" /></div>
+                    <div id="p2Type2" class="line"><img src="img/type/tag_poison.jpeg" style="width: 72px" /></div>
+                </div>
+                <div class="panel-title">ポケモン2</div>
+                <div class="line"><select name="p2Name" id="p2Name" class="select-pokemon suggest pokemon-name" style="min-width: 280px"></select></div>
+                <div class="line"><select name="p2m1Name" id="p2m1Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p2m1Type"></span><span id="p2m1Category"></span></div>
+                <div class="line"><select name="p2m2Name" id="p2m2Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p2m2Type"></span><span id="p2m2Category"></span></div>
+                <div class="line"><select name="p2m3Name" id="p2m3Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p2m3Type"></span><span id="p2m3Category"></span></div>
+                <div class="line"><select name="p2m4Name" id="p2m4Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p2m4Type"></span><span id="p2m4Category"></span></div>
+                <input type="hidden" id="p2Name-on" value="0" />
+            </div>
+
+            <div class="panel">
+                <div class="side">
+                    <div id="p3Exclude" class="panel-icon"><span id="p3Icon"><img src="img/pokemon/フシギダネ.png" /></span></div>
+                    <div id="p3Type1" class="line"><img src="img/type/tag_grass.jpeg" style="width: 72px" /></div>
+                    <div id="p3Type2" class="line"><img src="img/type/tag_poison.jpeg" style="width: 72px" /></div>
+                </div>
+                <div class="panel-title">ポケモン3</div>
+                <div class="line"><select name="p3Name" id="p3Name" class="select-pokemon suggest pokemon-name" style="min-width: 280px"></select></div>
+                <div class="line"><select name="p3m1Name" id="p3m1Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p3m1Type"></span><span id="p3m1Category"></span></div>
+                <div class="line"><select name="p3m2Name" id="p3m2Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p3m2Type"></span><span id="p3m2Category"></span></div>
+                <div class="line"><select name="p3m3Name" id="p3m3Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p3m3Type"></span><span id="p3m3Category"></span></div>
+                <div class="line"><select name="p3m4Name" id="p3m4Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p3m4Type"></span><span id="p3m4Category"></span></div>
+                <input type="hidden" id="p3Name-on" value="0" />
+            </div>
+
+            <div class="panel">
+                <div class="side">
+                    <div id="p4Exclude" class="panel-icon"><span id="p4Icon"><img src="img/pokemon/フシギダネ.png" /></span></div>
+                    <div id="p4Type1" class="line"><img src="img/type/tag_grass.jpeg" style="width: 72px" /></div>
+                    <div id="p4Type2" class="line"><img src="img/type/tag_poison.jpeg" style="width: 72px" /></div>
+                </div>
+                <div class="panel-title">ポケモン4</div>
+                <div class="line"><select name="p4Name" id="p4Name" class="select-pokemon suggest pokemon-name" style="min-width: 280px"></select></div>
+                <div class="line"><select name="p4m1Name" id="p4m1Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p4m1Type"></span><span id="p4m1Category"></span></div>
+                <div class="line"><select name="p4m2Name" id="p4m2Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p4m2Type"></span><span id="p4m2Category"></span></div>
+                <div class="line"><select name="p4m3Name" id="p4m3Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p4m3Type"></span><span id="p4m3Category"></span></div>
+                <div class="line"><select name="p4m4Name" id="p4m4Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p4m4Type"></span><span id="p4m4Category"></span></div>
+                <input type="hidden" id="p4Name-on" value="0" />
+            </div>
+
+            <div class="panel">
+                <div class="side">
+                    <div id="p5Exclude" class="panel-icon"><span id="p5Icon"><img src="img/pokemon/フシギダネ.png" /></span></div>
+                    <div id="p5Type1" class="line"><img src="img/type/tag_grass.jpeg" style="width: 72px" /></div>
+                    <div id="p5Type2" class="line"><img src="img/type/tag_poison.jpeg" style="width: 72px" /></div>
+                </div>
+                <div class="panel-title">ポケモン5</div>
+                <div class="line"><select name="p5Name" id="p5Name" class="select-pokemon suggest pokemon-name" style="min-width: 280px"></select></div>
+                <div class="line"><select name="p5m1Name" id="p5m1Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p5m1Type"></span><span id="p5m1Category"></span></div>
+                <div class="line"><select name="p5m2Name" id="p5m2Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p5m2Type"></span><span id="p5m2Category"></span></div>
+                <div class="line"><select name="p5m3Name" id="p5m3Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p5m3Type"></span><span id="p5m3Category"></span></div>
+                <div class="line"><select name="p5m4Name" id="p5m4Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p5m4Type"></span><span id="p5m4Category"></span></div>
+                <input type="hidden" id="p5Name-on" value="0" />
+            </div>
+
+            <div class="panel">
+                <div class="side">
+                    <div id="p6Exclude" class="panel-icon"><span id="p6Icon"><img src="img/pokemon/フシギダネ.png" /></span></div>
+                    <div id="p6Type1" class="line"><img src="img/type/tag_grass.jpeg" style="width: 72px" /></div>
+                    <div id="p6Type2" class="line"><img src="img/type/tag_poison.jpeg" style="width: 72px" /></div>
+                </div>
+                <div class="panel-title">ポケモン6</div>
+                <div class="line"><select name="p6Name" id="p6Name" class="select-pokemon suggest pokemon-name" style="min-width: 280px"></select></div>
+                <div class="line"><select name="p6m1Name" id="p6m1Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p6m1Type"></span><span id="p6m1Category"></span></div>
+                <div class="line"><select name="p6m2Name" id="p6m2Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p6m2Type"></span><span id="p6m2Category"></span></div>
+                <div class="line"><select name="p6m3Name" id="p6m3Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p6m3Type"></span><span id="p6m3Category"></span></div>
+                <div class="line"><select name="p6m4Name" id="p6m4Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p6m4Type"></span><span id="p6m4Category"></span></div>
+                <input type="hidden" id="p6Name-on" value="0" />
+            </div>
+
+            <div class="panel">
+                <div class="side">
+                    <div id="p7Exclude" class="panel-icon"><span id="p7Icon"><img src="img/pokemon/フシギダネ.png" /></span></div>
+                    <div id="p7Type1" class="line"><img src="img/type/tag_grass.jpeg" style="width: 72px" /></div>
+                    <div id="p7Type2" class="line"><img src="img/type/tag_poison.jpeg" style="width: 72px" /></div>
+                </div>
+                <div class="panel-title">ポケモン7</div>
+                <div class="line"><select name="p7Name" id="p7Name" class="select-pokemon suggest pokemon-name" style="min-width: 280px"></select></div>
+                <div class="line"><select name="p7m1Name" id="p7m1Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p7m1Type"></span><span id="p7m1Category"></span></div>
+                <div class="line"><select name="p7m2Name" id="p7m2Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p7m2Type"></span><span id="p7m2Category"></span></div>
+                <div class="line"><select name="p7m3Name" id="p7m3Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p7m3Type"></span><span id="p7m3Category"></span></div>
+                <div class="line"><select name="p7m4Name" id="p7m4Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p7m4Type"></span><span id="p7m4Category"></span></div>
+                <input type="hidden" id="p7Name-on" value="0" />
+            </div>
+
+            <div class="panel">
+                <div class="side">
+                    <div id="p8Exclude" class="panel-icon"><span id="p8Icon"><img src="img/pokemon/フシギダネ.png" /></span></div>
+                    <div id="p8Type1" class="line"><img src="img/type/tag_grass.jpeg" style="width: 72px" /></div>
+                    <div id="p8Type2" class="line"><img src="img/type/tag_poison.jpeg" style="width: 72px" /></div>
+                </div>
+                <div class="panel-title">ポケモン8</div>
+                <div class="line"><select name="p8Name" id="p8Name" class="select-pokemon suggest pokemon-name" style="min-width: 280px"></select></div>
+                <div class="line"><select name="p8m1Name" id="p8m1Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p8m1Type"></span><span id="p8m1Category"></span></div>
+                <div class="line"><select name="p8m2Name" id="p8m2Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p8m2Type"></span><span id="p8m2Category"></span></div>
+                <div class="line"><select name="p8m3Name" id="p8m3Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p8m3Type"></span><span id="p8m3Category"></span></div>
+                <div class="line"><select name="p8m4Name" id="p8m4Name" class="select-move suggest move-name" style="min-width: 140px"></select><span id="p8m4Type"></span><span id="p8m4Category"></span></div>
+                <input type="hidden" id="p8Name-on" value="0" />
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="panel-lg">
+                
+                <div class="panel-title">サイクルバランス</div>
+
+                <table>
+                    <tr>
+                        <td></td>
+                        <td><img src="img/type/icon_normal.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_fire.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_water.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_electric.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_grass.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_ice.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_fighting.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_poison.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_ground.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_flying.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_psychic.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_bug.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_rock.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_ghost.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_dragon.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_dark.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_steel.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_fairy.png" style="width: 30px" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>x4</td>
+                        <td id="dfx4Normal-cell"><div id="dfx4Normal">0</div></td>
+                        <td id="dfx4Fire-cell"><div id="dfx4Fire">0</div></td>
+                        <td id="dfx4Wdfer-cell"><div id="dfx4Wdfer">0</div></td>
+                        <td id="dfx4Electric-cell"><div id="dfx4Electric">0</div></td>
+                        <td id="dfx4Grass-cell"><div id="dfx4Grass">0</div></td>
+                        <td id="dfx4Ice-cell"><div id="dfx4Ice">0</div></td>
+                        <td id="dfx4Fighting-cell"><div id="dfx4Fighting">0</div></td>
+                        <td id="dfx4Poison-cell"><div id="dfx4Poison">0</div></td>
+                        <td id="dfx4Ground-cell"><div id="dfx4Ground">0</div></td>
+                        <td id="dfx4Flying-cell"><div id="dfx4Flying">0</div></td>
+                        <td id="dfx4Psychic-cell"><div id="dfx4Psychic">0</div></td>
+                        <td id="dfx4Bug-cell"><div id="dfx4Bug">0</div></td>
+                        <td id="dfx4Rock-cell"><div id="dfx4Rock">0</div></td>
+                        <td id="dfx4Ghost-cell"><div id="dfx4Ghost">0</div></td>
+                        <td id="dfx4Dragon-cell"><div id="dfx4Dragon">0</div></td>
+                        <td id="dfx4Dark-cell"><div id="dfx4Dark">0</div></td>
+                        <td id="dfx4Steel-cell"><div id="dfx4Steel">0</div></td>
+                        <td id="dfx4Fairy-cell"><div id="dfx4Fairy">0</div></td>
+                    </tr>
+
+                    <tr>
+                        <td>x2</td>
+                        <td id="dfx2Normal-cell"><div id="dfx2Normal">0</div></td>
+                        <td id="dfx2Fire-cell"><div id="dfx2Fire">0</div></td>
+                        <td id="dfx2Wdfer-cell"><div id="dfx2Wdfer">0</div></td>
+                        <td id="dfx2Electric-cell"><div id="dfx2Electric">0</div></td>
+                        <td id="dfx2Grass-cell"><div id="dfx2Grass">0</div></td>
+                        <td id="dfx2Ice-cell"><div id="dfx2Ice">0</div></td>
+                        <td id="dfx2Fighting-cell"><div id="dfx2Fighting">0</div></td>
+                        <td id="dfx2Poison-cell"><div id="dfx2Poison">0</div></td>
+                        <td id="dfx2Ground-cell"><div id="dfx2Ground">0</div></td>
+                        <td id="dfx2Flying-cell"><div id="dfx2Flying">0</div></td>
+                        <td id="dfx2Psychic-cell"><div id="dfx2Psychic">0</div></td>
+                        <td id="dfx2Bug-cell"><div id="dfx2Bug">0</div></td>
+                        <td id="dfx2Rock-cell"><div id="dfx2Rock">0</div></td>
+                        <td id="dfx2Ghost-cell"><div id="dfx2Ghost">0</div></td>
+                        <td id="dfx2Dragon-cell"><div id="dfx2Dragon">0</div></td>
+                        <td id="dfx2Dark-cell"><div id="dfx2Dark">0</div></td>
+                        <td id="dfx2Steel-cell"><div id="dfx2Steel">0</div></td>
+                        <td id="dfx2Fairy-cell"><div id="dfx2Fairy">0</div></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>x1</td>
+                        <td id="dfx1Normal-cell"><div id="dfx1Normal">0</div></td>
+                        <td id="dfx1Fire-cell"><div id="dfx1Fire">0</div></td>
+                        <td id="dfx1Wdfer-cell"><div id="dfx1Wdfer">0</div></td>
+                        <td id="dfx1Electric-cell"><div id="dfx1Electric">0</div></td>
+                        <td id="dfx1Grass-cell"><div id="dfx1Grass">0</div></td>
+                        <td id="dfx1Ice-cell"><div id="dfx1Ice">0</div></td>
+                        <td id="dfx1Fighting-cell"><div id="dfx1Fighting">0</div></td>
+                        <td id="dfx1Poison-cell"><div id="dfx1Poison">0</div></td>
+                        <td id="dfx1Ground-cell"><div id="dfx1Ground">0</div></td>
+                        <td id="dfx1Flying-cell"><div id="dfx1Flying">0</div></td>
+                        <td id="dfx1Psychic-cell"><div id="dfx1Psychic">0</div></td>
+                        <td id="dfx1Bug-cell"><div id="dfx1Bug">0</div></td>
+                        <td id="dfx1Rock-cell"><div id="dfx1Rock">0</div></td>
+                        <td id="dfx1Ghost-cell"><div id="dfx1Ghost">0</div></td>
+                        <td id="dfx1Dragon-cell"><div id="dfx1Dragon">0</div></td>
+                        <td id="dfx1Dark-cell"><div id="dfx1Dark">0</div></td>
+                        <td id="dfx1Steel-cell"><div id="dfx1Steel">0</div></td>
+                        <td id="dfx1Fairy-cell"><div id="dfx1Fairy">0</div></td>
+                    </tr>
+
+                    <tr>
+                        <td>x1/2</td>
+                        <td id="dfx05Normal-cell"><div id="dfx05Normal">0</div></td>
+                        <td id="dfx05Fire-cell"><div id="dfx05Fire">0</div></td>
+                        <td id="dfx05Wdfer-cell"><div id="dfx05Wdfer">0</div></td>
+                        <td id="dfx05Electric-cell"><div id="dfx05Electric">0</div></td>
+                        <td id="dfx05Grass-cell"><div id="dfx05Grass">0</div></td>
+                        <td id="dfx05Ice-cell"><div id="dfx05Ice">0</div></td>
+                        <td id="dfx05Fighting-cell"><div id="dfx05Fighting">0</div></td>
+                        <td id="dfx05Poison-cell"><div id="dfx05Poison">0</div></td>
+                        <td id="dfx05Ground-cell"><div id="dfx05Ground">0</div></td>
+                        <td id="dfx05Flying-cell"><div id="dfx05Flying">0</div></td>
+                        <td id="dfx05Psychic-cell"><div id="dfx05Psychic">0</div></td>
+                        <td id="dfx05Bug-cell"><div id="dfx05Bug">0</div></td>
+                        <td id="dfx05Rock-cell"><div id="dfx05Rock">0</div></td>
+                        <td id="dfx05Ghost-cell"><div id="dfx05Ghost">0</div></td>
+                        <td id="dfx05Dragon-cell"><div id="dfx05Dragon">0</div></td>
+                        <td id="dfx05Dark-cell"><div id="dfx05Dark">0</div></td>
+                        <td id="dfx05Steel-cell"><div id="dfx05Steel">0</div></td>
+                        <td id="dfx05Fairy-cell"><div id="dfx05Fairy">0</div></td>
+                    </tr>
+
+                    <tr>
+                        <td>x1/4</td>
+                        <td id="dfx025Normal-cell"><div id="dfx025Normal">0</div></td>
+                        <td id="dfx025Fire-cell"><div id="dfx025Fire">0</div></td>
+                        <td id="dfx025Wdfer-cell"><div id="dfx025Wdfer">0</div></td>
+                        <td id="dfx025Electric-cell"><div id="dfx025Electric">0</div></td>
+                        <td id="dfx025Grass-cell"><div id="dfx025Grass">0</div></td>
+                        <td id="dfx025Ice-cell"><div id="dfx025Ice">0</div></td>
+                        <td id="dfx025Fighting-cell"><div id="dfx025Fighting">0</div></td>
+                        <td id="dfx025Poison-cell"><div id="dfx025Poison">0</div></td>
+                        <td id="dfx025Ground-cell"><div id="dfx025Ground">0</div></td>
+                        <td id="dfx025Flying-cell"><div id="dfx025Flying">0</div></td>
+                        <td id="dfx025Psychic-cell"><div id="dfx025Psychic">0</div></td>
+                        <td id="dfx025Bug-cell"><div id="dfx025Bug">0</div></td>
+                        <td id="dfx025Rock-cell"><div id="dfx025Rock">0</div></td>
+                        <td id="dfx025Ghost-cell"><div id="dfx025Ghost">0</div></td>
+                        <td id="dfx025Dragon-cell"><div id="dfx025Dragon">0</div></td>
+                        <td id="dfx025Dark-cell"><div id="dfx025Dark">0</div></td>
+                        <td id="dfx025Steel-cell"><div id="dfx025Steel">0</div></td>
+                        <td id="dfx025Fairy-cell"><div id="dfx025Fairy">0</div></td>
+                    </tr>
+
+                    <tr>
+                        <td>x0</td>
+                        <td id="dfx0Normal-cell"><div id="dfx0Normal">0</div></td>
+                        <td id="dfx0Fire-cell"><div id="dfx0Fire">0</div></td>
+                        <td id="dfx0Wdfer-cell"><div id="dfx0Wdfer">0</div></td>
+                        <td id="dfx0Electric-cell"><div id="dfx0Electric">0</div></td>
+                        <td id="dfx0Grass-cell"><div id="dfx0Grass">0</div></td>
+                        <td id="dfx0Ice-cell"><div id="dfx0Ice">0</div></td>
+                        <td id="dfx0Fighting-cell"><div id="dfx0Fighting">0</div></td>
+                        <td id="dfx0Poison-cell"><div id="dfx0Poison">0</div></td>
+                        <td id="dfx0Ground-cell"><div id="dfx0Ground">0</div></td>
+                        <td id="dfx0Flying-cell"><div id="dfx0Flying">0</div></td>
+                        <td id="dfx0Psychic-cell"><div id="dfx0Psychic">0</div></td>
+                        <td id="dfx0Bug-cell"><div id="dfx0Bug">0</div></td>
+                        <td id="dfx0Rock-cell"><div id="dfx0Rock">0</div></td>
+                        <td id="dfx0Ghost-cell"><div id="dfx0Ghost">0</div></td>
+                        <td id="dfx0Dragon-cell"><div id="dfx0Dragon">0</div></td>
+                        <td id="dfx0Dark-cell"><div id="dfx0Dark">0</div></td>
+                        <td id="dfx0Steel-cell"><div id="dfx0Steel">0</div></td>
+                        <td id="dfx0Fairy-cell"><div id="dfx0Fairy">0</div></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="panel-lg">
+                
+                <div class="panel-title">打点バランス</div>
+
+                <table>
+                    <tr>
+                        <td></td>
+                        <td><img src="img/type/icon_normal.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_fire.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_water.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_electric.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_grass.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_ice.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_fighting.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_poison.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_ground.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_flying.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_psychic.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_bug.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_rock.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_ghost.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_dragon.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_dark.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_steel.png" style="width: 30px" /></td>
+                        <td><img src="img/type/icon_fairy.png" style="width: 30px" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>x2</td>
+                        <td id="atx2Normal-cell"><div id="atx2Normal">0</div></td>
+                        <td id="atx2Fire-cell"><div id="atx2Fire">0</div></td>
+                        <td id="atx2Water-cell"><div id="atx2Water">0</div></td>
+                        <td id="atx2Electric-cell"><div id="atx2Electric">0</div></td>
+                        <td id="atx2Grass-cell"><div id="atx2Grass">0</div></td>
+                        <td id="atx2Ice-cell"><div id="atx2Ice">0</div></td>
+                        <td id="atx2Fighting-cell"><div id="atx2Fighting">0</div></td>
+                        <td id="atx2Poison-cell"><div id="atx2Poison">0</div></td>
+                        <td id="atx2Ground-cell"><div id="atx2Ground">0</div></td>
+                        <td id="atx2Flying-cell"><div id="atx2Flying">0</div></td>
+                        <td id="atx2Psychic-cell"><div id="atx2Psychic">0</div></td>
+                        <td id="atx2Bug-cell"><div id="atx2Bug">0</div></td>
+                        <td id="atx2Rock-cell"><div id="atx2Rock">0</div></td>
+                        <td id="atx2Ghost-cell"><div id="atx2Ghost">0</div></td>
+                        <td id="atx2Dragon-cell"><div id="atx2Dragon">0</div></td>
+                        <td id="atx2Dark-cell"><div id="atx2Dark">0</div></td>
+                        <td id="atx2Steel-cell"><div id="atx2Steel">0</div></td>
+                        <td id="atx2Fairy-cell"><div id="atx2Fairy">0</div></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>x1</td>
+                        <td id="atx1Normal-cell"><div id="atx1Normal">0</div></td>
+                        <td id="atx1Fire-cell"><div id="atx1Fire">0</div></td>
+                        <td id="atx1Water-cell"><div id="atx1Water">0</div></td>
+                        <td id="atx1Electric-cell"><div id="atx1Electric">0</div></td>
+                        <td id="atx1Grass-cell"><div id="atx1Grass">0</div></td>
+                        <td id="atx1Ice-cell"><div id="atx1Ice">0</div></td>
+                        <td id="atx1Fighting-cell"><div id="atx1Fighting">0</div></td>
+                        <td id="atx1Poison-cell"><div id="atx1Poison">0</div></td>
+                        <td id="atx1Ground-cell"><div id="atx1Ground">0</div></td>
+                        <td id="atx1Flying-cell"><div id="atx1Flying">0</div></td>
+                        <td id="atx1Psychic-cell"><div id="atx1Psychic">0</div></td>
+                        <td id="atx1Bug-cell"><div id="atx1Bug">0</div></td>
+                        <td id="atx1Rock-cell"><div id="atx1Rock">0</div></td>
+                        <td id="atx1Ghost-cell"><div id="atx1Ghost">0</div></td>
+                        <td id="atx1Dragon-cell"><div id="atx1Dragon">0</div></td>
+                        <td id="atx1Dark-cell"><div id="atx1Dark">0</div></td>
+                        <td id="atx1Steel-cell"><div id="atx1Steel">0</div></td>
+                        <td id="atx1Fairy-cell"><div id="atx1Fairy">0</div></td>
+                    </tr>
+
+                    <tr>
+                        <td>x1/2</td>
+                        <td id="atx05Normal-cell"><div id="atx05Normal">0</div></td>
+                        <td id="atx05Fire-cell"><div id="atx05Fire">0</div></td>
+                        <td id="atx05Water-cell"><div id="atx05Water">0</div></td>
+                        <td id="atx05Electric-cell"><div id="atx05Electric">0</div></td>
+                        <td id="atx05Grass-cell"><div id="atx05Grass">0</div></td>
+                        <td id="atx05Ice-cell"><div id="atx05Ice">0</div></td>
+                        <td id="atx05Fighting-cell"><div id="atx05Fighting">0</div></td>
+                        <td id="atx05Poison-cell"><div id="atx05Poison">0</div></td>
+                        <td id="atx05Ground-cell"><div id="atx05Ground">0</div></td>
+                        <td id="atx05Flying-cell"><div id="atx05Flying">0</div></td>
+                        <td id="atx05Psychic-cell"><div id="atx05Psychic">0</div></td>
+                        <td id="atx05Bug-cell"><div id="atx05Bug">0</div></td>
+                        <td id="atx05Rock-cell"><div id="atx05Rock">0</div></td>
+                        <td id="atx05Ghost-cell"><div id="atx05Ghost">0</div></td>
+                        <td id="atx05Dragon-cell"><div id="atx05Dragon">0</div></td>
+                        <td id="atx05Dark-cell"><div id="atx05Dark">0</div></td>
+                        <td id="atx05Steel-cell"><div id="atx05Steel">0</div></td>
+                        <td id="atx05Fairy-cell"><div id="atx05Fairy">0</div></td>
+                    </tr>
+
+                    <tr>
+                        <td>x0</td>
+                        <td id="atx0Normal-cell"><div id="atx0Normal">0</div></td>
+                        <td id="atx0Fire-cell"><div id="atx0Fire">0</div></td>
+                        <td id="atx0Water-cell"><div id="atx0Water">0</div></td>
+                        <td id="atx0Electric-cell"><div id="atx0Electric">0</div></td>
+                        <td id="atx0Grass-cell"><div id="atx0Grass">0</div></td>
+                        <td id="atx0Ice-cell"><div id="atx0Ice">0</div></td>
+                        <td id="atx0Fighting-cell"><div id="atx0Fighting">0</div></td>
+                        <td id="atx0Poison-cell"><div id="atx0Poison">0</div></td>
+                        <td id="atx0Ground-cell"><div id="atx0Ground">0</div></td>
+                        <td id="atx0Flying-cell"><div id="atx0Flying">0</div></td>
+                        <td id="atx0Psychic-cell"><div id="atx0Psychic">0</div></td>
+                        <td id="atx0Bug-cell"><div id="atx0Bug">0</div></td>
+                        <td id="atx0Rock-cell"><div id="atx0Rock">0</div></td>
+                        <td id="atx0Ghost-cell"><div id="atx0Ghost">0</div></td>
+                        <td id="atx0Dragon-cell"><div id="atx0Dragon">0</div></td>
+                        <td id="atx0Dark-cell"><div id="atx0Dark">0</div></td>
+                        <td id="atx0Steel-cell"><div id="atx0Steel">0</div></td>
+                        <td id="atx0Fairy-cell"><div id="atx0Fairy">0</div></td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="panel-lg">
+                
+                <div class="panel-title">登録情報</div>
+
+                <div class="line">
+                    <span>絞り込み</span>
+                    <input type="text" />
+                    <div class="side"><input type="button" class="btn-sm" value="登録" /></div>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">v0.0.0 - 20200215 | 利用規約 | プライバシーポリシー | ©️2020 Hayato Takahashi　</div>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="js/lib/jquery/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/lib/select2/select2.full.min.js"></script>
+<script type="text/javascript" src="js/lib/select2/select2.jp.js"></script>
+<script type="text/javascript" src="js/lib/moji/moji.js"></script>
+
+<script type="text/javascript" src="js/data/pokemon-data.js"></script>
+<script type="text/javascript" src="js/data/type-data.js"></script>
+<script type="text/javascript" src="js/data/move-data.js"></script>
+<script type="text/javascript" src="js/data/ability-data.js"></script>
+
+<script type="text/javascript" src="js/event/event-pokemon-icon.js"></script>
+<script type="text/javascript" src="js/event/event-move.js"></script>
+<script type="text/javascript" src="js/event/event-at-number.js"></script>
+<script type="text/javascript" src="js/event/event-df-number.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+</html>

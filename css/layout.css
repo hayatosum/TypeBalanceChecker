@@ -1,0 +1,192 @@
+body {
+    margin: 0px;
+    width: 100%;
+    font-size: 12px;
+    font-family: verdana, arial, sans-serif;
+    background-color: #eeeeee;
+}
+
+.container {
+    display: inline-block;
+    vertical-align: top;
+    margin: auto;
+    width: 850px;
+}
+
+.header {
+    margin: auto;
+    min-width: 1740px;
+    color: #ffffff;
+    background-color: #444444;
+    border-bottom: 4px solid #f4a460;
+}
+
+.header-content {
+    margin: auto;
+    min-width: 1740px;
+    max-width: 1740px;
+    height: 34px;
+    font-size: 14px;
+}
+
+.header-icon {
+    display: inline-block;
+    margin: 6px 6px 4px 8px;
+}
+
+.header-title {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+}
+
+.footer {
+    margin: auto;
+    min-width: 1740px;
+    max-width: 1740px;
+    color: #888888;
+}
+
+.footer-content {
+    display: inline-block;
+    min-width: 1740px;
+    max-width: 1740px;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.title,
+.nav {
+    display: inline-block;
+    margin: 6px 8px 2px 8px;
+    color: #ffffff;
+}
+
+.nav {
+    float: right;
+}
+
+.main {
+    margin: auto;
+    text-align: center;
+}
+
+.panel {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px;
+    width: 400px;
+    min-height: 200px;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.panel-lg {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px;
+    width: 820px;
+    min-height: 245px;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.panel-title {
+    margin: -9px -9px 10px -9px;
+    padding: 5px 8px 3px 8px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #555555;
+    border: 1px solid #333333;
+    color: #ffffff;
+}
+
+.panel-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    background-color: #ffffff;
+    border: 1px solid #888888;
+    border-radius: 8px;
+}
+
+.scroll-box {
+    max-height: 810px;
+    overflow: scroll;
+}
+
+.thread {
+    min-width: 50px;
+}
+
+.label {
+    text-align: center;
+}
+
+.rankIcon {
+    font-size: 14px;
+}
+
+.side {
+    float: right;
+    text-align: right;
+}
+
+.wide {
+    width: 100%;
+}
+
+.index-number {
+    text-align: right;
+}
+
+select {
+    border: 1px solid #888888;
+    border-radius: 4px;
+}
+
+a:link {
+    color: #000000;
+}
+
+a:hover {
+    color: #666666;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.line-label {
+    display: inline-block;
+    width: 56px;
+    margin-left: 4px;
+}
+
+.line-cell {
+    display: inline-block;
+    min-width: 54px;
+    text-align: center;
+}
+
+.line-separate {
+    height: 2px;
+    background-color: #888888;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.remainHp {
+    position: relative;
+    z-index: 1;
+}

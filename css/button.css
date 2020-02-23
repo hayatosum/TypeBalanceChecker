@@ -1,0 +1,19 @@
+.btn-sm {
+    cursor: pointer;
+    /* height: 20px; */
+    font-size: 12px;
+    font-family: verdana, arial, sans-serif;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    background-color: #666666;
+    color: #ffffff;
+}
+
+.btn-sm:active {
+    background-color: #bbbbbb;
+}
+
+.btn-sm:hover {
+    background-color: #dddddd;
+    color: #333333;
+}
